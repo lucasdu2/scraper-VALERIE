@@ -18,9 +18,9 @@ class EPSSpiderPipeline(object):
         self.csv_writer = csv.writer(self.csv_output, delimiter=',')
         self.csv_writer.writerow(self.headerRow)
 
-    def close_spider(self, spider):
+	def close_spider(self, spider):
         self.csv_input.close()
-        self.csv_input.close()
+        self.csv_output.close()
             
     def process_item(self, item, spider):
         # get current line from csv
